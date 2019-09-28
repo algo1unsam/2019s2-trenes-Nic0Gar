@@ -1,0 +1,66 @@
+import vagonPasajero.*
+import vagonCarga.*
+import locomotora.*
+import formacion.*
+import deposito.*
+
+describe "describe"{
+	
+	//----------DEPOSITO--------//
+	
+	var deposito
+	
+	//----------FORMACION--------//
+	
+	var formacion1 
+	
+	//----------LOCOMOTORA--------//
+	
+	var loco1
+	var loco2
+	var loco3
+	var loco4
+	
+	//----------VAGON CARGA--------//
+	
+	var vc1
+	var vc2
+	var vc3
+	var vc4
+		
+	//----------VAGON PASAJEROS--------//		
+	
+	var vp1 = new VagonPasajero(ancho=3, largo= 10)
+	var vp2 = new VagonPasajero( ancho = 2, largo= 2)
+	var vp3 = new VagonPasajero( ancho = 1.5, largo= 5)
+	var vp4 = new VagonPasajero( ancho = 3, largo= 20)
+	var vp5 = new VagonPasajero( ancho = 3, largo= 30)
+	
+	fixture{
+		deposito = new Deposito()
+		formacion1 = new Formacion(formacion = #{ })
+		vc1 = new VagonCarga(cargaMaxima = 1000)
+		vc2 = new VagonCarga(cargaMaxima = 100)
+		vc3 = new VagonCarga(cargaMaxima = 2000)
+		vc4 = new VagonCarga(cargaMaxima = 500)
+		vp1 = new VagonPasajero(ancho=3, largo= 10)
+		vp2 = new VagonPasajero( ancho = 2, largo= 2)
+		vp3 = new VagonPasajero( ancho = 1.5, largo= 5)
+		vp4 = new VagonPasajero( ancho = 3, largo= 20)
+		vp5 = new VagonPasajero( ancho = 3, largo= 30)
+		loco1 = new Locomotora()
+	}
+	
+	
+	
+	
+
+	test "punto 1" {
+		
+		
+		assert.that(true)
+	}
+
+}
+
+
