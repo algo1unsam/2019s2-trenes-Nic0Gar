@@ -6,7 +6,7 @@ class Formacion{
 	var formacion = #{ }
 	
 	
-	method cuantosVagonesLivianos() = formacion.count({ unTren => unTren.cargaMaxima() <= 2500  })
+	method cuantosVagonesLivianos() = formacion.count({ unTren => unTren.cargaMaxima() <= 2500  }) // TODO se podría delegar
 	
 	method devuelveVagones() = formacion.filter({unTren => unTren.cargaMaxima() != 0})
 	
@@ -14,7 +14,7 @@ class Formacion{
 	
 	method velocidaMaxima() = self.devuelveLocomotoras().min({ unaLocomotora => unaLocomotora.velMaxima() })
 	
-	method formacionEficiente() = self.devuelveLocomotoras().all({ unaLocomotora =>  unaLocomotora.peso() * 5 >= unaLocomotora.puedeArrastrar() })
+	method formacionEficiente() = self.devuelveLocomotoras().all({ unaLocomotora =>  unaLocomotora.peso() * 5 >= unaLocomotora.puedeArrastrar() }) // TODO Lo mismo se podría delegar en la locomotora
 	
 	method pesoVagones() = self.devuelveVagones().sum({ unVagon => unVagon.cargaMaxima() }) 
 	

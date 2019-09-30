@@ -8,7 +8,10 @@ class Deposito {
 	var property locomotoras = #{ }
 
 	// ---------------- 6 -------------//
-	method vagonesMasPesados() = formaciones.forEach({ unaFormacion => unaFormacion.max({ formacion => formacion.cargaMaxima()}) })
+	//TODO si delegas en la formacion el caclulo del bajon mas pesado te queda mas simplificado
+	// formaciones.map({formacion => formacion.vagonMasPesado()}).asSet() // tiene que devolver un conjunto según el enunciado
+	method vagonesMasPesados() = formaciones.forEach({ unaFormacion => unaFormacion.max({ formacion => formacion.cargaMaxima()}) })  // TODO formación no entiende este mensaje
+	// 
 
 	// ---------------- 7 -------------//
 	method conductorExperimentado() = formaciones.any({ unaFormacion => (unaFormacion.cantVehiculos() > 20) or (unaFormacion.pesoTotalFormacion() >= 10000) })
